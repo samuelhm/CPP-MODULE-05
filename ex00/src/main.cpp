@@ -6,7 +6,7 @@
 /*   By: shurtado <shurtado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 11:54:47 by shurtado          #+#    #+#             */
-/*   Updated: 2025/03/11 19:12:05 by shurtado         ###   ########.fr       */
+/*   Updated: 2025/03/11 19:21:02 by shurtado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,23 +74,17 @@ void testOutOfRange()
 	}
 	catch (const std::exception &e)
 	{
-		std::cerr << "Exception caught: " << e.what() << std::endl;
+		std::cerr << "Exception caught: " << Color::red << e.what() << Color::reset << std::endl;
 	}
 }
 
 int main()
 {
-	std::string tittles[3] =
-	{
-		"Testing Increment-Decrement",
-		"Testing Assignment",
-		"Testing out of Range"
-	};
-	Frame::FrameTittle(tittles[0], Color::cyan);
+	Frame::FrameTittle("Testing Increment-Decrement", Color::cyan);
 	testIncrementDecrement();
-	Frame::FrameTittle(tittles[1], Color::cyan);
+	Frame::FrameTittle("Testing Assignment", Color::cyan);
 	testAssignment();
-	Frame::FrameTittle(tittles[2], Color::cyan);
+	Frame::FrameTittle("Testing out of Range", Color::cyan);
 	testOutOfRange();
 	return 0;
 }
