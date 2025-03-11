@@ -6,7 +6,7 @@
 #    By: shurtado <shurtado@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/09 11:52:37 by shurtado          #+#    #+#              #
-#    Updated: 2025/03/11 16:37:55 by shurtado         ###   ########.fr        #
+#    Updated: 2025/03/11 18:17:40 by shurtado         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,10 +30,10 @@ all: $(CUTE) $(NAME)
 
 $(CUTE):
 	git submodule update --init --recursive
-	$(MAKE) -C $(CUTE_DIR)
+	$(MAKE) -C $(CUTE_DIR) CXXFLAGS="-std=c++98"
 
 $(NAME): $(OBJS) $(CUTE)
-	$(CC) $(INCLUDES) $(CPPFLAGS) -o $@ $^ $(LDFLAGS)
+	$(CC) $(INCLUDES) $(CPPFLAGS) -o $@ $(OBJS) $(CUTE) $(LDFLAGS)
 
 obj/%.o: %.cpp Makefile
 	@mkdir -p $(dir $@)
