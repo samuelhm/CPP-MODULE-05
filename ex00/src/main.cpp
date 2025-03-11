@@ -6,7 +6,7 @@
 /*   By: shurtado <shurtado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 11:54:47 by shurtado          #+#    #+#             */
-/*   Updated: 2025/03/11 18:56:25 by shurtado         ###   ########.fr       */
+/*   Updated: 2025/03/11 19:00:58 by shurtado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void testOutOfRange()
 
 int main()
 {
-	const std::string tittles[3] =
+	std::string tittles[3] =
 	{
 		"Testing Increment-Decrement",
 		"Testing Assignment",
