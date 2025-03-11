@@ -6,13 +6,14 @@
 #    By: shurtado <shurtado@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/09 11:52:37 by shurtado          #+#    #+#              #
-#    Updated: 2025/03/11 18:17:40 by shurtado         ###   ########.fr        #
+#    Updated: 2025/03/11 18:40:09 by shurtado         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	Bureaucrat
 CC			=	c++
-CPPFLAGS	=	-g -Wall -Werror -Wextra -std=c++98 -MMD -MP -fsanitize=address -pedantic
+CXXFLAGS	=	-D_GLIBCXX_USE_CXX11_ABI=0 -std=c++98
+CPPFLAGS	=	$(CXXFLAGS) -g -Wall -Werror -Wextra -MMD -MP -fsanitize=address -pedantic
 
 LDFLAGS		=	-L$(CUTE_DIR) -lcute
 INCLUDES	=	-I$(CUTE_DIR)/inc
@@ -30,10 +31,10 @@ all: $(CUTE) $(NAME)
 
 $(CUTE):
 	git submodule update --init --recursive
-	$(MAKE) -C $(CUTE_DIR) CXXFLAGS="-std=c++98"
+	$(MAKE) -C $(CUTE_DIR)
 
 $(NAME): $(OBJS) $(CUTE)
-	$(CC) $(INCLUDES) $(CPPFLAGS) -o $@ $(OBJS) $(CUTE) $(LDFLAGS)
+	$(CC) $(INCLUDES) $(CPPFLAGS) -o $@ $(OBJS) $(LDFLAGS) $(CUTE)
 
 obj/%.o: %.cpp Makefile
 	@mkdir -p $(dir $@)
