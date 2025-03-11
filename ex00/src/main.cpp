@@ -6,12 +6,11 @@
 /*   By: shurtado <shurtado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 11:54:47 by shurtado          #+#    #+#             */
-/*   Updated: 2025/03/11 19:00:58 by shurtado         ###   ########.fr       */
+/*   Updated: 2025/03/11 19:12:05 by shurtado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat/Bureaucrat.hpp"
-#include "../../shared/lib/inc/CuteConsole.h"
 
 void testIncrementDecrement()
 {
@@ -27,7 +26,7 @@ void testIncrementDecrement()
 	}
 	catch (const std::exception &e)
 	{
-		std::cerr << "Exception caught: " << e.what() << std::endl;
+		std::cerr << "Exception caught: " << Color::red << e.what() << Color::reset << std::endl;
 	}
 	try
 	{
@@ -40,7 +39,7 @@ void testIncrementDecrement()
 	}
 	catch (const std::exception &e)
 	{
-		std::cerr << "Exception caught: " << e.what() << std::endl;
+		std::cerr << "Exception caught: " << Color::red << e.what() << Color::reset << std::endl;
 	}
 }
 
@@ -54,7 +53,7 @@ void testAssignment()
 		std::cout << b2 << std::endl;
 	}
 	catch (const std::exception &e) {
-	std::cerr << "Exception caught: " << e.what() << std::endl;
+	std::cerr << "Exception caught: " << Color::red << e.what() << Color::reset << std::endl;
 	}
 }
 
@@ -66,7 +65,7 @@ void testOutOfRange()
 	}
 	catch (const std::exception &e)
 	{
-		std::cerr << "Exception caught: " << e.what() << std::endl;
+		std::cerr << "Exception caught: " << Color::red << e.what() << Color::reset << std::endl;
 	}
 
 	try
@@ -87,11 +86,11 @@ int main()
 		"Testing Assignment",
 		"Testing out of Range"
 	};
-	Frame::FrameTittle(tittles[0], Color::bblue);
+	Frame::FrameTittle(tittles[0], Color::cyan);
 	testIncrementDecrement();
-	Frame::FrameTittle(tittles[1], Color::bblue);
+	Frame::FrameTittle(tittles[1], Color::cyan);
 	testAssignment();
-	Frame::FrameTittle(tittles[2], Color::bblue);
+	Frame::FrameTittle(tittles[2], Color::cyan);
 	testOutOfRange();
 	return 0;
 }

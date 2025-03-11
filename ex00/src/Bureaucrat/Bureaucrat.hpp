@@ -6,7 +6,7 @@
 /*   By: shurtado <shurtado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 11:53:58 by shurtado          #+#    #+#             */
-/*   Updated: 2025/03/11 17:54:44 by shurtado         ###   ########.fr       */
+/*   Updated: 2025/03/11 19:09:11 by shurtado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <string>
 #include <stdexcept>
 #include <iostream>
+#include "../../../shared/lib/inc/CuteConsole.h"
 
 class Bureaucrat
 {

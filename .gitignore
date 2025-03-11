@@ -1,0 +1,63 @@
+# Archivos de compilación
+*.o
+*.obj
+*.so
+*.dll
+*.dylib
+*.a
+*.lib
+
+# Archivos de ejecución
+*.exe
+*.out
+*.app
+
+# Directorios de compilación
+bin/
+build/
+obj/
+
+# Archivos generados por el compilador
+*.d
+*.gcno
+*.gcda
+*.gcov
+
+# Archivos de depuración
+*.log
+*.stackdump
+*.core
+
+# Editor de texto y entornos de desarrollo
+.vscode/
+*.swp
+*.swo
+*.swn
+
+# Archivos de configuración de CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Archivos generados por Make
+*.dSYM/
+*.dep
+*.Tpo
+*.Tps
+*.Po
+*.Plo
+config.log
+config.status
+
+# Archivos de prueba y temporales
+*.tmp
+*.bak
+*.orig
+*.rej
+
+# Archivos ocultos en Unix
+.*.sw?
+
+# Archivos de control de Git que pueden ser generados por algunos entornos
+*.DS_Store
