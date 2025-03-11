@@ -6,20 +6,19 @@
 #    By: shurtado <shurtado@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/09 11:52:37 by shurtado          #+#    #+#              #
-#    Updated: 2025/03/11 18:40:09 by shurtado         ###   ########.fr        #
+#    Updated: 2025/03/11 18:59:58 by shurtado         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	Bureaucrat
 CC			=	c++
-CXXFLAGS	=	-D_GLIBCXX_USE_CXX11_ABI=0 -std=c++98
-CPPFLAGS	=	$(CXXFLAGS) -g -Wall -Werror -Wextra -MMD -MP -fsanitize=address -pedantic
-
-LDFLAGS		=	-L$(CUTE_DIR) -lcute
-INCLUDES	=	-I$(CUTE_DIR)/inc
+CPPFLAGS	=	-std=c++98 -g -Wall -Werror -Wextra -MMD -MP -fsanitize=address -pedantic
 
 CUTE_DIR	=	../shared/lib
 CUTE		=	$(CUTE_DIR)/libcute.a
+
+LDFLAGS		=	-L$(CUTE_DIR) -lcute
+INCLUDES	=	-I$(CUTE_DIR)/inc
 
 CLASSES		=	Bureaucrat
 SRC			=	$(addprefix src/, $(foreach class, $(CLASSES), $(class)/$(class).cpp) main.cpp)
