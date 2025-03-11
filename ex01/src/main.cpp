@@ -6,7 +6,7 @@
 /*   By: shurtado <shurtado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 11:54:47 by shurtado          #+#    #+#             */
-/*   Updated: 2025/03/11 21:18:03 by shurtado         ###   ########.fr       */
+/*   Updated: 2025/03/11 21:19:30 by shurtado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void testSigningSuccess()
 	}
 	catch (const std::exception &e)
 	{
-		std::cerr << "Excepción atrapada: " << e.what() << std::endl;
+		std::cerr << "exception caught: " << e.what() << std::endl;
 	}
 }
 
@@ -42,7 +42,7 @@ void testSigningFailure()
 	}
 	catch (const std::exception &e)
 	{
-		std::cerr << "Excepción atrapada: " << e.what() << std::endl;
+		std::cerr << "exception caught: " << e.what() << std::endl;
 	}
 }
 
@@ -60,7 +60,7 @@ void testAlreadySignedForm()
 	}
 	catch (const std::exception &e)
 	{
-		std::cerr << "Excepción atrapada: " << e.what() << std::endl;
+		std::cerr << "exception caught: " << e.what() << std::endl;
 	}
 }
 
@@ -72,7 +72,7 @@ void testInvalidFormGrades()
 	}
 	catch (const std::exception &e)
 	{
-		std::cerr << "Excepción atrapada: " << e.what() << std::endl;
+		std::cerr << "exception caught: " << e.what() << std::endl;
 	}
 
 	try
@@ -81,7 +81,7 @@ void testInvalidFormGrades()
 	}
 	catch (const std::exception &e)
 	{
-		std::cerr << "Excepción atrapada: " << e.what() << std::endl;
+		std::cerr << "exception caught: " << e.what() << std::endl;
 	}
 }
 
