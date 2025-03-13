@@ -6,7 +6,7 @@
 /*   By: shurtado <shurtado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 11:54:47 by shurtado          #+#    #+#             */
-/*   Updated: 2025/03/11 21:19:30 by shurtado         ###   ########.fr       */
+/*   Updated: 2025/03/11 21:20:15 by shurtado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ void testSigningSuccess()
 {
 	try
 	{
-		Bureaucrat alice("Alice", 5); // Bureaucrat con grado alto
-		Form contract("Contract", 10, 20); // Form con signGrade = 10
+		Bureaucrat alice("Alice", 5);
+		Form contract("Contract", 10, 20);
 
 		std::cout << contract << std::endl;
-		alice.signForm(contract); // Alice debe poder firmarlo
+		alice.signForm(contract);
 		std::cout << contract << std::endl;
 	}
 	catch (const std::exception &e)
